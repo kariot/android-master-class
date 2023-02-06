@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_navigation"
+    app:startDestination="@id/requestOtpFragment">
+
+    <fragment
+        android:id="@+id/requestOtpFragment"
+        android:name="com.example.weatherapp.RequestOtpFragment"
+        android:label="fragment_request_otp"
+        tools:layout="@layout/fragment_request_otp" >
+        <action
+            android:id="@+id/action_requestOtpFragment_to_verifyOtpFragment2"
+            app:destination="@id/verifyOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.example.weatherapp.VerifyOtpFragment"
+        android:label="fragment_verify_otp"
+        tools:layout="@layout/fragment_verify_otp" >
+        <argument
+            android:name="verificationId"
+            app:argType="string" />
+    </fragment>
+</navigation>
